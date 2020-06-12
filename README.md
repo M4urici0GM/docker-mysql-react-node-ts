@@ -1,18 +1,31 @@
-# :blue_heart: Template for ReactJS and NodeJS using Docker and MongoDB with Typescript
+# :rocket: Template for ReactJS and NodeJS using Docker and MySQL with Typescript :blue_heart:
 
 ## :exclamation: Requirements
 
 -  Docker (if you do not have the database installed)
--  MongoDB (if you do not have docker installed)
+-  MySQL (if you do not have docker installed)
 -  Node
 -  Yarn
+
+## :: Commands (helper)
+
+-  Make the `How to` steps and then follow the code below
+-  `cd packages/api`
+   -  `yarn prisma init` (to set up a new prisma project, *not needed in this project*)
+   -  `yarn prisma generate` (generates the model types for the typescript intellisense)
+   -  `yarn prisma introspect` (creates the models from the existing database)
+   -  `yarn prisma migrate save --experimental` (generates a migration from the models)
+   -  `yarn prisma migrate up --experimental` (makes changes to the database from migrations)
+   -  `yarn prisma studio --experimental` (runs a visual editor for your database)
 
 ## :question: How to
 
 -  Get started:
    -  Type `yarn` to install its dependencies.
 -  Configure the .env:
+   -  Copy the `.env.example` from root to `.env`
    -  Copy the `.env.example` from `packages/api` to `.env.development`
+   -  Copy the `.env.example` from `packages/api/prisma` to `.env`
    -  Copy the `.env.example` from `packages/web` to `.env.development`
    -  Change your variable environments.
 -  Start for development:
@@ -57,7 +70,7 @@
 -  Type `docker-compose up --build -d` to up and run the application.
 -  Access `IP:5000` or `DNS:5000` in the browser.
 
-## :interrobang: Possible Errors
+## :interrobang: Possible errors
 
 -  MongooseServerSelectionError: connect ECONNREFUSED 127.0.0.1:27017
    -  Be sure your `MONGO_URL` on `api .env.production` has the container's name instead of `localhost` (e.g: `mongodb://database/test`)
@@ -75,6 +88,7 @@
 ## :octocat: Contributors
 
 [//]: contributor-faces
+
 <a href="https://github.com/lucasgdb"><img src="https://avatars3.githubusercontent.com/u/13838273?v=4" title="lucasgdb" width="80" height="80"></a>
 <a href="https://github.com/tabaesso"><img src="https://avatars1.githubusercontent.com/u/43206830?v=4" title="tabaesso" width="80" height="80"></a>
 
