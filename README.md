@@ -9,7 +9,7 @@
 
 ## :hotsprings: Commands (helper)
 
--  Make the `How to` steps and then follow the code below
+-  Follow the `How to` steps and then follow the steps below
 -  `cd packages/api`
    -  `yarn prisma init` (to set up a new prisma project, _not needed in this project_)
    -  `yarn prisma generate` (generates the model types for the typescript intellisense)
