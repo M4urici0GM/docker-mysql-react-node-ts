@@ -7,11 +7,11 @@
 -  Node
 -  Yarn
 
-## :: Commands (helper)
+## :hotsprings: Commands (helper)
 
 -  Make the `How to` steps and then follow the code below
 -  `cd packages/api`
-   -  `yarn prisma init` (to set up a new prisma project, *not needed in this project*)
+   -  `yarn prisma init` (to set up a new prisma project, _not needed in this project_)
    -  `yarn prisma generate` (generates the model types for the typescript intellisense)
    -  `yarn prisma introspect` (creates the models from the existing database)
    -  `yarn prisma migrate save --experimental` (generates a migration from the models)
@@ -70,15 +70,6 @@
 -  Type `docker-compose up --build -d` to up and run the application.
 -  Access `IP:5000` or `DNS:5000` in the browser.
 
-## :interrobang: Possible errors
-
--  MongooseServerSelectionError: connect ECONNREFUSED 127.0.0.1:27017
-   -  Be sure your `MONGO_URL` on `api .env.production` has the container's name instead of `localhost` (e.g: `mongodb://database/test`)
--  MongooseServerSelectionError: getaddrinfo ENOTFOUND database
-   -  Be sure your `MONGO_URL` on `api .env.development` has the localhost instead of container's name (e.g: `mongodb://localhost/test`)
--  ENOSPC: System limit for number of file watchers reached
-   -  Run `echo 65536 | sudo tee -a /proc/sys/fs/inotify/max_user_watches` (Linux, re-run when needed)
-
 ## :boy: Author
 
 | [<img src="https://avatars3.githubusercontent.com/u/13838273?v=3&s=115"><br><sub>@lucasgdb</sub>](https://github.com/lucasgdb) |
@@ -90,6 +81,5 @@
 [//]: contributor-faces
 
 <a href="https://github.com/lucasgdb"><img src="https://avatars3.githubusercontent.com/u/13838273?v=4" title="lucasgdb" width="80" height="80"></a>
-<a href="https://github.com/tabaesso"><img src="https://avatars1.githubusercontent.com/u/43206830?v=4" title="tabaesso" width="80" height="80"></a>
 
 [//]: contributor-faces
