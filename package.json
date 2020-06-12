@@ -3,7 +3,7 @@
 	"private": true,
 	"version": "1.0.0",
 	"author": "Lucas Bittencourt <lucasgdbittencourt@gmail.com>",
-	"repository": "lucasgdb/docker-mongo-react-node-ts",
+	"repository": "lucasgdb/docker-mysql-react-node-ts",
 	"license": "MIT",
 	"scripts": {
 		"api:start": "yarn workspace @template/api start",
