@@ -1,11 +1,12 @@
 import { Request, Response } from 'express';
+import { PrismaClient } from '@prisma/client';
 
-import User from '../models/User';
+const prisma = new PrismaClient();
 
 export default {
-	async index(req: Request, res: Response) {
+	async index(_req: Request, res: Response) {
 		try {
-			const users = await User.find();
+			const users = await prisma.user.findMany();
 
 			return res.status(200).json(users);
 		} catch (err) {

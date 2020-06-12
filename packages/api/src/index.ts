@@ -2,10 +2,8 @@ import express, { Express } from 'express';
 import compression from 'compression';
 import cors from 'cors';
 
-import { PORT } from './configs/env';
-
 import routes from './routes';
-import('./database');
+import { PORT } from './configs/env';
 
 const app: Express = express();
 
