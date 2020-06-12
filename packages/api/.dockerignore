@@ -1,0 +1,12 @@
+node_modules
+dist
+.prettierrc
+Dockerfile
+modules.d.ts
+tslint.json
+yarn-error.log
+.env.example
+.env.development
+.env.development.local
+.env.test
+.env.test.local

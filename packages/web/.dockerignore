@@ -1,0 +1,11 @@
+node_modules
+.gitignore
+.prettierrc
+Dockerfile
+tslint.json
+build
+.env.example
+.env.development
+.env.development.local
+.env.test
+.env.test.local

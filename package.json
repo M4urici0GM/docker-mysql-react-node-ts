@@ -1,0 +1,26 @@
+{
+	"name": "template",
+	"private": true,
+	"version": "1.0.0",
+	"author": "Lucas Bittencourt <lucasgdbittencourt@gmail.com>",
+	"repository": "lucasgdb/docker-mongo-react-node-ts",
+	"license": "MIT",
+	"scripts": {
+		"api:start": "yarn workspace @template/api start",
+		"api:production": "yarn workspace @template/api run start:production",
+		"api:build": "yarn workspace @template/api run build",
+		"web:start": "yarn workspace @template/web start",
+		"web:production": "yarn workspace @template/web run start:production",
+		"web:build": "yarn workspace @template/web run build",
+		"start": "concurrently --kill-others \"yarn api:start\" \"yarn web:start\"",
+		"build": "yarn workspaces run build",
+		"contributors": "contributor-faces . -e !*[bot]"
+	},
+	"devDependencies": {
+		"concurrently": "^5.1.0",
+		"contributor-faces": "^1.0.3"
+	},
+	"workspaces": [
+		"./packages/*"
+	]
+}
