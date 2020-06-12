@@ -33,11 +33,15 @@
    -  Type `yarn start` to start both web and api (or just `yarn web:start` and `yarn api:start`).
    -  Access `http://localhost:3000` on the browser.
 -  Use product build:
-   -  Type `docker-compose -f docker-compose.dev.yml up` to build and run the database.
+   -  Type `docker-compose -f docker-compose.dev.yml up` to build and run both database and phpmyadmin.
    -  Type `yarn build` to build the packages.
    -  Type `yarn api:production` to start the production build of api.
    -  Type `yarn web:production` to start the production build of web.
-   -  Access `http://localhost:5000` on the browser.
+   -  Access `http://localhost:5000` on the browser (web).
+   -  Access `http://localhost` on the browser (phpmyadmin).
+      -  Data:
+         -  Server: `database`
+         -  Username and Password: located on `.env`
 
 ## :whale: Using Docker
 
