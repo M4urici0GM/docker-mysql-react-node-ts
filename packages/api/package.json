@@ -7,7 +7,7 @@
 	"scripts": {
 		"start": "cross-env NODE_ENV=development nodemon src/index.ts",
 		"start:production": "node .",
-		"build": "babel ./src --out-dir dist --copy-files --extensions '.ts,.js'"
+		"build": "babel ./src --out-dir dist --copy-files --extensions \".ts,.js\""
 	},
 	"dependencies": {
 		"@prisma/client": "^2.0.0",
