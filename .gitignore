@@ -1,3 +1,5 @@
 node_modules
 yarn-error.log
 aws_deploy.pem
+.env*
+!.env.example
