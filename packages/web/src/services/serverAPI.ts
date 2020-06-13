@@ -5,7 +5,7 @@ import { IAuth } from './authentication';
 
 const auth = localStorage.getItem('R:auth');
 
-let accessToken;
+let accessToken: string | undefined;
 
 if (auth) {
 	const parseAuth: IAuth = JSON.parse(auth);

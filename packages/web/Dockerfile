@@ -12,6 +12,4 @@ FROM nginx:alpine
 COPY --from=build /build /usr/share/nginx/html/
 COPY --from=build /nginx.conf /etc/nginx/conf.d/default.conf
 
-EXPOSE 5000
-
 ENTRYPOINT [ "nginx", "-g", "daemon off;" ]
