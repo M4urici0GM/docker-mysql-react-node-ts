@@ -52,25 +52,6 @@
    -  Type `docker-compose up -d` or `docker-compose up --build -d`
    -  Access `http://localhost:5000` on the browser.
 
-## :cloud: Hosting (AWS EC2)
-
--  Create a new EC2 instance on AWS Console Management
-   -  Get the `aws_deploy.pem` file and move it here.
-   -  Get the public DNS from AWS of your new instance (OS@DNS), for example: `ubuntu@ec2-18-228-24-132.sa-east-1.compute.amazonaws.com`
--  Configure the .env:
-   -  Copy the `.env.example` from `packages/api` to `.env.production`
-   -  Copy the `.env.example` from `packages/web` to `.env.production`
-   -  Change the environment variables.
--  Type `ssh -i "aws_deploy.pem" OS@AWS_DNS`
--  Type `mkdir app`
--  Type `ctrl + D`
--  Type `rsync -avr -e "ssh -l user -i aws_deploy.pem" --exclude '**/*/node_modules' --exclude '**/*/dist' --exclude '**/*/build' packages docker-compose.yml OS@AWS_DNS:/home/OS/app`
--  Type `ssh -i "aws_deploy.pem" OS@AWS_DNS`
--  Type `cd app`
--  Type `docker-compose down` to down and stop the running application (if it exists).
--  Type `docker-compose up --build -d` to up and run the application.
--  Access `IP:5000` or `DNS:5000` in the browser.
-
 ## :boy: Author
 
 | [<img src="https://avatars3.githubusercontent.com/u/13838273?v=3&s=115"><br><sub>@lucasgdb</sub>](https://github.com/lucasgdb) |
