@@ -1,7 +1,6 @@
 import { Request, Response } from 'express';
-import { PrismaClient } from '@prisma/client';
 
-const prisma = new PrismaClient();
+import prisma from '../configs/prisma';
 
 export default {
 	async index(_req: Request, res: Response) {
@@ -10,7 +9,7 @@ export default {
 
 			return res.status(200).json(users);
 		} catch (err) {
-			return res.status(400).json(err);
+			return res.status(400).send(err);
 		}
 	},
 };

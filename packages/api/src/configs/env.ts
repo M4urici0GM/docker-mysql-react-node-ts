@@ -1,15 +1,6 @@
-import customEnv from 'custom-env';
+import dotenv from 'dotenv';
 
-const { NODE_ENV } = process.env;
+dotenv.config();
 
-if (NODE_ENV === 'development') {
-	customEnv.env('development');
-} else if (NODE_ENV === 'production') {
-	customEnv.env('production');
-} else {
-	customEnv.env();
-}
-
-export const { MONGO_URL } = process.env;
 export const { SECRET_HASH } = process.env;
 export const { PORT } = process.env;

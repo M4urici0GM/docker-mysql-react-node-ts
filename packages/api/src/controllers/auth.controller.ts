@@ -1,24 +1,20 @@
 import bcrypt from 'bcryptjs';
 import { Request, Response } from 'express';
-import { PrismaClient } from '@prisma/client';
 
 import generateAccessToken from '../helpers/generateAccessToken';
 import encryptPassword from '../helpers/encryptPassword';
-
-const prisma = new PrismaClient();
+import prisma from '../configs/prisma';
 
 export default {
 	async register(req: Request, res: Response) {
 		try {
-			const { cpf, name, email, password, type } = req.body;
+			const { name, email, password } = req.body;
 
 			const user = await prisma.user.create({
 				data: {
-					cpf,
 					name,
 					email,
 					password: await encryptPassword(password),
-					type,
 				},
 			});
 
@@ -30,7 +26,7 @@ export default {
 				user,
 			});
 		} catch (err) {
-			return res.status(400).json(err);
+			return res.status(400).send(err);
 		}
 	},
 
@@ -48,15 +44,15 @@ export default {
 				return res.status(400).json({ message: 'Invalid password.' });
 			}
 
-			const { id, name } = user;
+			user.password = undefined!;
 
 			return res.status(200).json({
 				authenticated: true,
-				accessToken: generateAccessToken(id.toString()),
-				user: { id, email: user.email, name },
+				accessToken: generateAccessToken(user.id.toString()),
+				user,
 			});
 		} catch (err) {
-			return res.status(400).json(err);
+			return res.status(400).send(err);
 		}
 	},
 };

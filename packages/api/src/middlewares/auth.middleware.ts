@@ -26,12 +26,12 @@ export default function AuthMiddleware(
 		return res.status(401).json({ message: 'Token malformatted' });
 	}
 
-	jwt.verify(token, SECRET_HASH, (err, decoded) => {
+	jwt.verify(token, SECRET_HASH, (err: any, decoded: any) => {
 		if (err) {
 			return res.status(401).json({ message: 'Invalid token' });
 		}
 
-		req._id = (decoded as any)._id;
+		req.id = (decoded as any).id;
 
 		return next();
 	});
