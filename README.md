@@ -12,33 +12,27 @@
 -  Follow the `How to` steps and then follow the steps below
 -  `cd packages/api`
    -  `yarn prisma init` (to set up a new prisma project, _not needed in this project_)
-   -  `yarn prisma generate` (generates the model types for the typescript intellisense)
-   -  `yarn prisma introspect` (creates the models from the existing database)
-   -  `yarn prisma migrate save --experimental` (generates a migration from the models)
-   -  `yarn prisma migrate up --experimental` (makes changes to the database from migrations)
-   -  `yarn prisma studio --experimental` (runs a visual editor for your database)
+   -  `yarn prisma:generate` (generates the model types for the typescript intellisense)
+   -  `yarn prisma:introspect` (creates the models from the existing database)
+   -  `yarn prisma:migrate:save` (generates a migration from the models)
+   -  `yarn prisma:migrate:up` (makes changes to the database from migrations)
+   -  `yarn prisma:studio` (runs a visual editor for your database)
 
 ## :question: How to
 
 -  Get started:
    -  Type `yarn` to install its dependencies.
 -  Configure the .env:
-   -  Copy the `.env.example` from root to `.env`
-   -  Copy the `.env.example` from `packages/api` to `.env.development`
-   -  Copy the `.env.example` from `packages/api/prisma` to `.env`
+   -  Copy the `.env.example` from `packages/api` to `.env`
    -  Copy the `.env.example` from `packages/web` to `.env.development`
    -  Change your variable environments.
 -  Start for development:
-   -  Type `docker-compose -f docker-compose.dev.yml up` to build and run the database.
-   -  Type `yarn start` to start both web and api (or just `yarn web:start` and `yarn api:start`).
-   -  Access `http://localhost:3000` on the browser.
--  Use product build:
-   -  Type `docker-compose -f docker-compose.dev.yml up` to build and run both database and phpmyadmin.
-   -  Type `yarn build` to build the packages.
-   -  Type `yarn api:production` to start the production build of api.
-   -  Type `yarn web:production` to start the production build of web.
-   -  Access `http://localhost:5000` on the browser (web).
-   -  Access `http://localhost` on the browser (phpmyadmin).
+   -  Type `cd packages/api`
+      -  Type `docker-compose -f docker-compose.dev.yml up` to build and run the database and the phpmyadmin.
+   -  Type `cd ../..`
+      -  Type `yarn start` to start both web and api (or just `yarn web:start` and `yarn api:start`).
+   -  Access `localhost:5000` on the browser (web).
+   -  Access `localhost` on the browser (phpmyadmin).
       -  Data:
          -  Server: `database`
          -  Username and Password: located on `.env`
@@ -46,14 +40,17 @@
 ## :whale: Using Docker
 
 -  Configuring the .env:
-   -  Copy the `.env.example` from `packages/api` to `.env.production`
-      -  Replace the `localhost` from `MONGO_URL` to `database` (or the service name)
+   -  Copy the `.env.example` from `packages/api` to `.env`
+      -  Make your changes
    -  Copy the `.env.example` from `packages/web` to `.env.production`
-   -  Make your changes
--  Type `docker build -t template/web packages/web` (optional)
--  Type `docker build -t template/api packages/api` (optional)
--  Type `docker-compose up` or `docker-compose up --build`
--  Access `http://localhost:5000` on the browser.
+      -  Make your changes
+-  Type `docker build -t template/web packages/web`
+-  Type `docker build -t template/api packages/api`
+-  Type `cd packages/api`
+   -  Type `docker-compose up -d` or `docker-compose up --build -d`
+-  Type `cd ../web`
+   -  Type `docker-compose up -d` or `docker-compose up --build -d`
+   -  Access `http://localhost:5000` on the browser.
 
 ## :cloud: Hosting (AWS EC2)
 
