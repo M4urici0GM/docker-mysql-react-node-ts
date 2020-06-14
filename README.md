@@ -10,13 +10,11 @@
 ## :hotsprings: Commands (helper)
 
 -  Follow the `How to` steps and then follow the steps below
--  `cd packages/api`
-   -  `yarn prisma init` (to set up a new prisma project, _not needed in this project_)
-   -  `yarn prisma:generate` (generates the model types for the typescript intellisense)
-   -  `yarn prisma:introspect` (creates the models from the existing database)
-   -  `yarn prisma:migrate:save` (generates a migration from the models)
-   -  `yarn prisma:migrate:up` (makes changes to the database from migrations)
-   -  `yarn prisma:studio` (runs a visual editor for your database)
+-  `yarn prisma:generate` (generates the model types for the typescript intellisense)
+-  `yarn prisma:introspect` (creates the models from the existing database)
+-  `yarn prisma:migrate:save` (generates a migration from the models)
+-  `yarn prisma:migrate:up` (makes changes to the database from migrations)
+-  `yarn prisma:studio` (runs a visual editor for your database)
 
 ## :question: How to
 
