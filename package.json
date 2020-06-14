@@ -14,6 +14,11 @@
 		"web:build": "yarn workspace @template/web run build",
 		"start": "concurrently --kill-others \"yarn api:start\" \"yarn web:start\"",
 		"build": "yarn workspaces run build",
+		"prisma:generate": "yarn workspace @template/api run prisma:generate",
+		"prisma:introspect": "yarn workspace @template/api run prisma:introspect",
+		"prisma:migrate:save": "yarn workspace @template/api run prisma:migrate:save",
+		"prisma:migrate:up": "yarn workspace @template/api run prisma:migrate:up",
+		"prisma:studio": "yarn workspace @template/api run prisma:studio",
 		"contributors": "contributor-faces . -e !*[bot]"
 	},
 	"devDependencies": {
