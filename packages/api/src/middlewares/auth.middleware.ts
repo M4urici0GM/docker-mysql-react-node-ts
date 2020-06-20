@@ -1,7 +1,7 @@
 import jwt from 'jsonwebtoken';
 import { Request, Response, NextFunction } from 'express';
 
-import { SECRET_HASH } from '../configs/env';
+import { SECRET_HASH } from '~/configs/env';
 
 export default function AuthMiddleware(
 	req: Request,

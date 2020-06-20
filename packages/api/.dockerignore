@@ -1,8 +1,8 @@
 node_modules
 dist
+@types
 .prettierrc
 Dockerfile
-modules.d.ts
 tslint.json
 yarn-error.log
 .env.example

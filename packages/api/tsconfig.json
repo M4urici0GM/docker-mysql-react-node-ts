@@ -1,12 +1,25 @@
 {
 	"compilerOptions": {
+		"target": "ES3",
+		"lib": ["ES6"],
+		"module": "CommonJS",
 		"esModuleInterop": true,
 		"allowJs": true,
 		"noEmit": true,
 		"moduleResolution": "node",
 		"resolveJsonModule": true,
-		"strict": true
+		"strict": true,
+		"rootDir": "src",
+		"outDir": "dist",
+		"removeComments": true,
+		"typeRoots": ["./node_modules/@types", "./@types"],
+		"forceConsistentCasingInFileNames": true,
+		"baseUrl": ".",
+		"skipLibCheck": true,
+		"paths": {
+			"~/*": ["./src/*"]
+		}
 	},
-	"include": ["src", "modules.d.ts"],
+	"include": ["src", "@types"],
 	"exclude": ["dist", "node_modules"]
 }

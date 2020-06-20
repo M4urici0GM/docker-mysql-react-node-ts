@@ -10,5 +10,3 @@ declare namespace Express {
 		id?: string;
 	}
 }
-
-declare module 'custom-env';

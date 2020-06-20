@@ -1,9 +1,9 @@
 import bcrypt from 'bcryptjs';
 import { Request, Response } from 'express';
 
-import generateAccessToken from '../helpers/generateAccessToken';
-import encryptPassword from '../helpers/encryptPassword';
-import prisma from '../configs/prisma';
+import generateAccessToken from '~/helpers/generateAccessToken';
+import encryptPassword from '~/helpers/encryptPassword';
+import prisma from '~/configs/prisma';
 
 export default {
 	async register(req: Request, res: Response) {

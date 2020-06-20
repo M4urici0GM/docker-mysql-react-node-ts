@@ -1,6 +1,6 @@
 import { Request, Response } from 'express';
 
-import prisma from '../configs/prisma';
+import prisma from '~/configs/prisma';
 
 export default {
 	async index(_req: Request, res: Response) {
