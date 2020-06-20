@@ -21,15 +21,18 @@
 -  Get started:
    -  Type `yarn` to install its dependencies.
 -  Configure the .env:
-   -  Copy the `.env.example` from `packages/api` to `.env`
+   -  Copy the `.env.example` from `packages/api` to `.env.development`
    -  Copy the `.env.example` from `packages/web` to `.env.development`
    -  Change your variable environments.
 -  Start for development:
-   -  Type `cd packages/api`
-      -  Type `docker-compose -f docker-compose.dev.yml up` to build and run the database and the phpmyadmin.
-   -  Type `cd ../..`
-      -  Type `yarn start` to start both web and api (or just `yarn web:start` and `yarn api:start`).
-   -  Access `localhost:5000` on the browser (web).
+   -  Type `docker-compose -f docker-compose.dev.yml up` to build and run the database.
+   -  Type `yarn dev` to start both web and api (or just `yarn web:dev` and `yarn api:dev`).
+   -  Access `http://localhost:3000` on the browser.
+-  Use product build:
+   -  Start the database server
+   -  Type `yarn build` to build the packages.
+   -  Type `yarn cross-env NODE_ENV=production -- yarn start` to start both web and api (or just `yarn cross-env NODE_ENV=production -- yarn web:start` and `yarn cross-env NODE_ENV=production -- yarn api:start`).
+   -  Access `http://localhost:5000` on the browser.
    -  Access `localhost` on the browser (phpmyadmin).
       -  Data:
          -  Server: `database`
