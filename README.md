@@ -21,7 +21,7 @@
 -  Get started:
    -  Type `yarn` to install its dependencies.
 -  Configure the .env:
-   -  Copy the `.env.example` from `packages/api` to `.env.development`
+   -  Copy the `.env.example` from `packages/api` to `.env`
    -  Copy the `.env.example` from `packages/web` to `.env.development`
    -  Change your variable environments.
 -  Start for development:
