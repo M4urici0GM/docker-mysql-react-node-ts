@@ -1,14 +1,15 @@
 # Folders
 node_modules
-@types
 build
+@types
 
 # Files
 .gitignore
 .prettierrc
 tslint.json
 Dockerfile
-docker-compose.yml
+docker-compose*.yml
+*.log
 
 # Development environment
 .env.example

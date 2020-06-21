@@ -1,10 +1,17 @@
+# Folders
 node_modules
 dist
 @types
+
+# Files
+.gitignore
 .prettierrc
-Dockerfile
 tslint.json
-yarn-error.log
+Dockerfile
+docker-compose*.yml
+*.log
+
+# Development environment
 .env.example
 .env.development
 .env.development.local
