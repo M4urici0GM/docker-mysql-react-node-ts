@@ -7,7 +7,20 @@
 -  Node
 -  Yarn
 
-## :hotsprings: Commands (helper)
+## :blue_heart: VSCode extensions
+
+-  Docker
+-  TSLint
+-  Error Lens
+-  Color Highlight
+-  EditorConfig for VS Code
+-  Visual Studio IntelliCode
+-  Prettier - Code Formatter
+-  GitLens - Git supercharged
+-  Dracula Official (optional)
+-  Material Icon Theme (optional)
+
+## :heart: Commands (helper)
 
 -  Follow the `How to` steps and then follow the steps below
 -  `yarn prisma:generate` (generates the model types for the typescript intellisense)
@@ -53,7 +66,7 @@
    -  Type `docker-compose up -d` or `docker-compose up --build -d`
    -  Access `http://localhost:5000` on the browser.
 
-## :boy: Author
+## :hand: Author
 
 | [<img src="https://avatars3.githubusercontent.com/u/13838273?v=3&s=115"><br><sub>@lucasgdb</sub>](https://github.com/lucasgdb) |
 | :----------------------------------------------------------------------------------------------------------------------------: |
