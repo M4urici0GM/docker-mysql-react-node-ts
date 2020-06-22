@@ -35,36 +35,51 @@
    -  Type `yarn` to install its dependencies.
 -  Configure the .env:
    -  Copy the `.env.example` from `packages/api` to `.env`
+      -  Environment variables:
+         -  `MYSQL_USER` (DB User)
+         -  `MYSQL_ROOT_PASSWORD` (DB Password)
+         -  `MYSQL_DATABASE` (DB Schema)
+         -  `SECRET_HASH` (Secret hash for JWT encoding)
+         -  `DATABASE_URL` (DB URL for Prisma)
    -  Copy the `.env.example` from `packages/web` to `.env.development`
-   -  Change your variable environments.
--  Start for development:
+      -  Environment variables:
+         -  `REACT_APP_API_URL` (URL to connect to the API, REST)
+   -  Change your environment variables.
+-  Get started for development:
    -  Type `docker-compose -f docker-compose.dev.yml up` to build and run the database.
    -  Type `yarn dev` to start both web and api (or just `yarn web:dev` and `yarn api:dev`).
    -  Access `http://localhost:3000` on the browser.
--  Use product build:
+-  Use product build locally:
    -  Start the database server
-   -  Type `yarn build` to build the packages.
+   -  Type `yarn build` to build all the packages.
    -  Type `yarn cross-env NODE_ENV=production -- yarn start` to start both web and api (or just `yarn cross-env NODE_ENV=production -- yarn web:start` and `yarn cross-env NODE_ENV=production -- yarn api:start`).
    -  Access `http://localhost:5000` on the browser.
    -  Access `localhost` on the browser (phpmyadmin).
       -  Data:
          -  Server: `database`
-         -  Username and Password: located on `.env`
+         -  Username and Password: located on API's `.env`
 
 ## :whale: Using Docker
 
 -  Configuring the .env:
    -  Copy the `.env.example` from `packages/api` to `.env`
-      -  Make your changes
+      -  Environment variables:
+         -  `MYSQL_USER` (DB User)
+         -  `MYSQL_ROOT_PASSWORD` (DB Password)
+         -  `MYSQL_DATABASE` (DB Schema)
+         -  `SECRET_HASH` (Secret hash for JWT encoding)
+         -  `DATABASE_URL` (DB URL for Prisma)
    -  Copy the `.env.example` from `packages/web` to `.env.production`
-      -  Make your changes
--  Type `docker build -t template/web packages/web`
--  Type `docker build -t template/api packages/api`
--  Type `cd packages/api`
+      -  Environment variables:
+         -  `REACT_APP_API_URL` (URL to connect to the API, REST)
+   -  Change your environment variables.
+-  At `packages/api`:
+   -  Type `docker build -t template/api .`
    -  Type `docker-compose up -d` or `docker-compose up --build -d`
--  Type `cd ../web`
+-  At `packages/web`:
+   -  Type `docker build -t template/web .`
    -  Type `docker-compose up -d` or `docker-compose up --build -d`
-   -  Access `http://localhost:5000` on the browser.
+-  Access `http://localhost:5000` on the browser.
 
 ## :hand: Author
 
