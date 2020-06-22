@@ -36,6 +36,7 @@
 		"babel-plugin-root-import": "^6.5.0",
 		"customize-cra": "^1.0.0",
 		"prettier": "^2.0.5",
+		"prettier-plugin-organize-imports": "^1.1.0",
 		"react-app-rewired": "^2.1.6",
 		"react-scripts": "^3.4.1",
 		"serve": "^11.3.2",

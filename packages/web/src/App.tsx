@@ -1,5 +1,4 @@
 import React from 'react';
-
 import Provider from '~/contexts';
 import Routes from '~/routes';
 

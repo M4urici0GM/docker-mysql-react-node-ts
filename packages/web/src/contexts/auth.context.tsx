@@ -1,11 +1,10 @@
 import React, {
-	useContext,
 	createContext,
 	useCallback,
-	useState,
+	useContext,
 	useEffect,
+	useState,
 } from 'react';
-
 import * as auth from '~/services/authentication';
 
 export interface IAuthContext {

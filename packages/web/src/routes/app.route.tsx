@@ -1,6 +1,5 @@
-import React, { Suspense, lazy } from 'react';
-import { Switch, Route, Redirect } from 'react-router-dom';
-
+import React, { lazy, Suspense } from 'react';
+import { Redirect, Route, Switch } from 'react-router-dom';
 import Load from '~/pages/Load';
 
 const Landing = lazy(() => import('~/pages/Landing'));

@@ -1,5 +1,4 @@
 import axios from 'axios';
-
 import { REACT_APP_API_URL } from '~/configs/env';
 import { IAuth } from './authentication';
 

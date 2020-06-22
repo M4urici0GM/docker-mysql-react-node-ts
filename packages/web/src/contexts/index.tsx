@@ -1,5 +1,4 @@
 import React from 'react';
-
 import AuthProvider from './auth.context';
 
 const Provider: React.FC = ({ children }) => (
