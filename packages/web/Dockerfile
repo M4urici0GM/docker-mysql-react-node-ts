@@ -5,6 +5,7 @@ RUN yarn install
 
 COPY . .
 RUN yarn build
+RUN rm -rf node_modules
 RUN yarn install --production
 
 FROM nginx:alpine
