@@ -41,6 +41,7 @@
          -  `MYSQL_DATABASE` (DB Schema)
          -  `SECRET_HASH` (Secret hash for JWT encoding)
          -  `DATABASE_URL` (DB URL for Prisma)
+         -  `PORT` (Server port, default: `8080`)
    -  Copy the `.env.example` from `packages/web` to `.env.development`
       -  Environment variables:
          -  `REACT_APP_API_URL` (URL to connect to the API, REST)
