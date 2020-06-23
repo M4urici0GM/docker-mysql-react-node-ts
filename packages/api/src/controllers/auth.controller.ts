@@ -2,7 +2,7 @@ import bcrypt from 'bcryptjs';
 import { Request, Response } from 'express';
 
 import generateAccessToken from '~/helpers/generateAccessToken';
-import encryptPassword from '~/helpers/encryptPassword';
+import { encryptPassword, verifyPassword } from '~/helpers/passwords';
 import prisma from '~/configs/prisma';
 
 export default {
@@ -40,7 +40,9 @@ export default {
 				return res.status(400).json({ message: 'User not found.' });
 			}
 
-			if (!(await bcrypt.compare(password, user.password))) {
+	
+
+			if (!(await verifyPassword(password, user.password))) {
 				return res.status(400).json({ message: 'Invalid password.' });
 			}
 

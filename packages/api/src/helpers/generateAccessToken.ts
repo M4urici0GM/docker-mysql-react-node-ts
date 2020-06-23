@@ -9,3 +9,13 @@ export default function generateAccessToken(id: string) {
 
 	return accessToken;
 }
+
+export function generateAccessTokenWithClaims(id: string, claims: Array<string>): string {
+	const accessToken = jwt.sign(
+		{ id, ...claims },
+		SECRET_HASH,
+		{ expiresIn: 7200 }
+	);
+
+	return accessToken;
+}
